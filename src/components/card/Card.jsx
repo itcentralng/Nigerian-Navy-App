@@ -3,9 +3,12 @@ import { FaInfo, FaBullseye, FaSitemap, FaBuilding, FaImage } from 'react-icons/
 
 const Card = ({ icon, label, isFirstCard }) => {
   const cardStyles = {
+    width: '126px',
+    height: '115px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center',
     margin: '10px',
     paddingTop: '10px',
     paddingBottom: '10px',
