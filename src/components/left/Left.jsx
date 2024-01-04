@@ -1,16 +1,23 @@
-import React from 'react'
-import './Left.css'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Left.css';
 
-function Left() {
+function Left({ heading, text }) {
+  const navigate = useNavigate();
+
+  const handleBackToHome = () => {
+    navigate('/');
+  };
+
   return (
     <div className='left'>
-        <h2 className="head">BIODATA OF THE CHEIF OF NAVAL STAFF</h2>
-        <p className="text">
-        Ear Admiral Emmanuel Ikechukwu Ogalla was born on 20 December 1968 in Enugu Ezike Igbo Eze north LGA Enugu State, Nigeria. He obtained the WASC from the NMS Zaria in June 1987 where he graduated as the best boy in Sciences. He had A1 in all subjects except English language. He is a member of the 39 Regular Course Nigerian Defence Academy Kaduna graduated with a BSc in Maths and was awarded sword of honour as the best naval cadet in his course. 
-        </p>
-        <button className="btn">BACK TO HOME</button>
+      <h2 className="head">{heading}</h2>
+      <p className="text">{text}</p>
+      <button className="btn" onClick={handleBackToHome}>
+        BACK TO HOME
+      </button>
     </div>
-  )
+  );
 }
 
-export default Left
+export default Left;

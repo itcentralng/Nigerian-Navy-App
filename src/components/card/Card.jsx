@@ -14,6 +14,7 @@ const Card = ({ icon, label, isFirstCard }) => {
     paddingBottom: '10px',
     paddingLeft: '20px',
     paddingRight: '20px',
+    cursor: 'pointer',
     border: isFirstCard ? 'none' : '1px solid white', // No border for the first card
     borderRadius: '15px',
     background: isFirstCard ? 'gold' : 'rgba(255, 255, 255, 0.3)', // Golden background for the first card

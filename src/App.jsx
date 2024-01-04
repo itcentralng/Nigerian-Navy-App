@@ -1,14 +1,19 @@
-import './App.css'
-import Page1 from './pages/Page1'
+// App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './pages/About';
+import Objectives from './pages/Objectives';
 
-function App() {
-
-
+const App = () => {
   return (
-    <div className='app'>
-      <Page1 />
-    </div>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/Objectives" element={<Objectives />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
