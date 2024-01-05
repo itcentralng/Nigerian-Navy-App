@@ -1,12 +1,14 @@
-// Right.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Right.css';
 
 import Topbar from '../topbar/Topbar';
 import Card from '../card/Card';
 
 function Right() {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <div className='right'>
       <Topbar />
@@ -15,27 +17,21 @@ function Right() {
       <h1 className="heading">Ei OGALLA</h1>
       <p className='tittle'>AM GSS pcs fdc(+) BSc MSc</p>
       <div className='card-container'>
-        
         <Link to="/about">
-          <Card icon="info" label="ABOUT" isFirstCard path="/about" />
+          <Card icon="info" label="ABOUT" isFirstCard={currentPath === '/about'} path="/about" />
         </Link>
-
         <Link to="/objectives">
-          <Card icon="bullseye" label="OBJECTIVES" path="/objectives" />
+          <Card icon="bullseye" label="OBJECTIVES" isFirstCard={currentPath === '/objectives'} path="/objectives" />
         </Link>
-
         <Link to="/departments">
-          <Card icon="sitemap" label="DEPARTMENTS" path="/departments" />
+          <Card icon="sitemap" label="DEPARTMENTS" isFirstCard={currentPath === '/departments'} path="/departments" />
         </Link>
-
         <Link to="/structures">
-          <Card icon="building" label="STRUCTURES" path="/structures" />
+          <Card icon="building" label="STRUCTURES" isFirstCard={currentPath === '/structures'} path="/structures" />
         </Link>
-
         <Link to="/gallery">
-          <Card icon="image" label="GALLERY" path="/gallery" />
+          <Card icon="image" label="GALLERY" isFirstCard={currentPath === '/gallery'} path="/gallery" />
         </Link>
-        
       </div>
     </div>
   );
