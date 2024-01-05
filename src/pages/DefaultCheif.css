@@ -1,3 +1,19 @@
+    
+    @font-face {
+        font-family: 'PerpetuaTitlingMTLight2'; 
+        src: url('./src/assets/fonts/perpetua-titling-mt/PerpetuaTitlingMTLight2.ttf') format('truetype');
+      }
+      
+      @font-face {
+        font-family: 'lato'; 
+        src: url('./src/assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+      }
+      
+      @font-face {
+        font-family: 'manrope'; 
+        src: url('./src/assets/fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
+      }
+    
     .dafaultChief {
         width: 100vw;
         height: 100vh;
