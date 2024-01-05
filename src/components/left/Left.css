@@ -31,11 +31,26 @@
     margin-top: 100px;
 }
 
-.text {
+
+@keyframes typing {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  .text {
+    overflow: hidden;
+    animation: typing 3s steps(40) forwards;
     text-align: left;
     font-family: 'Lato', sans-serif;
-    font-style: 26px;
-}
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  
 
 .btn {
     width: 141px;
