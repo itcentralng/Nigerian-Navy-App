@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<About />} />
+        <Route path="/" element={<DefaultCheif />} />
         <Route path="/about" element={<About />} />
         <Route path="/Objectives" element={<Objectives />} />
         <Route path="/default" element={<DefaultCheif />} />

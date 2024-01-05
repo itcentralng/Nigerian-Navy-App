@@ -1,6 +1,7 @@
 import React from 'react'
 import './DefaultCheif.css'
 import Topbar from '../components/topbar/Topbar'
+import { Link } from 'react-router-dom';
 
 function DefaultCheif() {
 
@@ -31,7 +32,10 @@ function DefaultCheif() {
         </div>
 
         <div className="right-side">
-<Topbar />        
+
+        <Link to="/about">
+         <Topbar path="/about"/> 
+        </Link>       
 </div>
 
         </div>
