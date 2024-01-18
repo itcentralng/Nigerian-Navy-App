@@ -1,9 +1,19 @@
 import React from 'react'
 import './DefaultCheif.css'
 import Topbar from '../components/topbar/Topbar'
-import { Link } from 'react-router-dom';
+
+import { Link, useLocation } from 'react-router-dom';
+
+
+import Card from '../components/card/Card';
+
+
+
 
 function DefaultCheif() {
+
+  const location = useLocation();
+  const currentPath = location.pathname;
 
     const heading = "THE CHEIFOF NAVAL STAFF";
 
@@ -44,7 +54,27 @@ function DefaultCheif() {
 <div className="bottom">
     <p className="text2" style={{textAlign: "right"}}>AM GSS pcs fdc(+) BSc MSc</p>
     <h1 className="head2" style={{textAlign: "right"}}>VICE ADMIRAL Ei OGALLA</h1>
+
+    <div className='card-container2'>
+        <Link to="/about">
+          <Card icon="info" label="ABOUT" isFirstCard={currentPath === '/about'} path="/about" />
+        </Link>
+        <Link to="/objectives">
+          <Card icon="bullseye" label="OBJECTIVES" isFirstCard={currentPath === '/objectives'} path="/objectives" />
+        </Link>
+        <Link to="/departments">
+          <Card icon="sitemap" label="DEPARTMENTS" isFirstCard={currentPath === '/departments'} path="/departments" />
+        </Link>
+        <Link to="/structures">
+          <Card icon="building" label="STRUCTURES" isFirstCard={currentPath === '/structures'} path="/structures" />
+        </Link>
+        <Link to="/gallery">
+          <Card icon="image" label="GALLERY" isFirstCard={currentPath === '/gallery'} path="/gallery" />
+        </Link>
+      </div>
 </div>
+
+
       </div>
   
   )

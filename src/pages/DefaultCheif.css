@@ -20,9 +20,6 @@
         margin: 0;
         padding: 0;
         flex: 1;
-        /* display: flex; */
-        /* align-items: center; */
-        /* justify-content: space-between; */
         overflow: hidden;
         box-sizing: border-box;
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url('./src/assets/images/bg.png');
@@ -50,10 +47,10 @@
         font-weight: 300;
         font-size: 60px;
         color: gold;
-        margin-top: 100px;
+        margin-top: 70px;
         margin: 0;
         padding: 0;
-        /* word-spacing: 0; */
+    
     }
   
 
@@ -66,5 +63,14 @@
         margin: 0;
 
     }
+
+    .card-container2 {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 50px;
+  }
 
     
